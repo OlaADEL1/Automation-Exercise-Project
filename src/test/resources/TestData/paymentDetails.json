@@ -1,0 +1,8 @@
+{
+  "cardName": "Ola",
+  "cardNumber": "41000000000000000",
+  "CVC": "123",
+  "expMonth": "12",
+  "expYear": "26",
+  "Description": "This is a text to test the Description field"
+}

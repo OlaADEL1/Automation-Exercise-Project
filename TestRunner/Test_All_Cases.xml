@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Cases">
+    <listeners>
+        <listener class-name="Listeners.IInvokedMethod"/>
+        <listener class-name="Listeners.ITestResultListener"/>
+    </listeners>
+    <test name="All Cases">
+        <groups>
+            <run>
+                <exclude name="Login"></exclude>
+            </run>
+        </groups>
+        <classes>
+            <class name="Tests.TC01_HomePage"/>
+            <class name="Tests.TC02_SignUpAndLoginPage"/>
+            <class name="Tests.TC03_SignUpSteps"/>
+            <class name="Tests.TC04_accountCreatedPage"/>
+            <class name="Tests.TC06_LoginCase"/>
+            <class name="Tests.TC07_InvalidLoginCase"/>
+            <class name="Tests.TC08_LogOutCase"/>
+            <class name="Tests.TC09_ProductsPage"/>
+            <class name="Tests.TC10_SearchProductPage"/>
+            <class name="Tests.TC11_AddProducts"/>
+            <class name="Tests.TC12_ProductPageQuantity"/>
+            <class name="Tests.TC13_PlaceOrder"/>
+            <class name="Tests.TC14_CategoryPage"/>
+            <class name="Tests.TC15_BrandPage"/>
+            <class name="Tests.TC16_VerifyAddressDetails"/>
+            <class name="Tests.TC17_DownloadInvoice"/>
+        </classes>
+    </test>
+</suite>

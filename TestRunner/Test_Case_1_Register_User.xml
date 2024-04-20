@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sign UP Suite">
+    <listeners>
+        <listener class-name="Listeners.IInvokedMethod"/>
+        <listener class-name="Listeners.ITestResultListener"/>
+    </listeners>
+    <test name="Sign UP test">
+        <groups>
+            <run>
+                <exclude name="Login"></exclude>
+            </run>
+        </groups>
+        <classes>
+            <class name="Tests.TC01_HomePage"/>
+            <class name="Tests.TC02_SignUpAndLoginPage">
+                <methods>
+                    <include name="InvalidSignUpStep01TC"/>
+                    <include name="validSignUpStep01TC"/>
+                </methods>
+            </class>
+            <class name="Tests.TC03_SignUpSteps"/>
+            <class name="Tests.TC04_accountCreatedPage"/>
+            <class name="Tests.TC05_LoggedInPage"/>
+        </classes>
+    </test>
+</suite>

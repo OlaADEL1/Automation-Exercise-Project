@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Address Details Suite">
+    <listeners>
+        <listener class-name="Listeners.IInvokedMethod"/>
+        <listener class-name="Listeners.ITestResultListener"/>
+    </listeners>
+    <test name="Address Details test">
+        <classes>
+            <class name="Tests.TC16_VerifyAddressDetails"/>
+        </classes>
+    </test>
+</suite>

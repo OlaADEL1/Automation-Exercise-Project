@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Search Product Suite">
+    <listeners>
+        <listener class-name="Listeners.IInvokedMethod"/>
+        <listener class-name="Listeners.ITestResultListener"/>
+    </listeners>
+    <test name="Search Product test">
+        <classes>
+            <class name="Tests.TC10_SearchProductPage"/>
+        </classes>
+    </test>
+</suite>

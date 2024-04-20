@@ -1,0 +1,14 @@
+{
+  "name": "ola",
+  "password": "ola123",
+  "day" : "1",
+  "month" : "April",
+  "year" : "1999",
+  "Country":"Canada" ,
+  "Company" : "Nezam",
+  "Address1" : "Egypt,Alexandria_1",
+  "Address2": "Egypt,Alexandria_2",
+  "State": "Alexandria",
+  "City": "Alexandria",
+  "Title": "Mrs"
+}
