@@ -2,7 +2,6 @@
 
 Automation Exercise is a website which is designed for practicing test automation.
 In this project I used Java, Selenium, TestNG, and Page Object Model (POM). To automate the test cases for this website
-
 It can be used during regression tests or after the deployment of any feature to make sure there are no affected areas in older modules.
 
 **Instructions to Contribute**
