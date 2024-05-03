@@ -1,4 +1,3 @@
-```diff
 +**Project Description**
 
 Automation Exercise is a website designed for practicing test automation.<br />
@@ -25,4 +24,4 @@ You can use "mvn allure:serve" in the terminal to see the summary of passed and 
 You can select any browser you want by changing it from "environment.properties" file
 5. Sign up/Login Test Case Video :<br />
 You can access this link "https://drive.google.com/file/d/13vQ_ZYWSvvzsEOyjLwGR0-U4ZwP7Hp62/view?usp=drive_link" to check the run of the sign up/login case 
-```
+
