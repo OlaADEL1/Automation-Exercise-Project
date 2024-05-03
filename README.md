@@ -1,10 +1,10 @@
-+**Project Description**
+**Project Description**
 
 Automation Exercise is a website designed for practicing test automation.<br />
 In this project I used Java, Selenium, TestNG, and Page Object Model (POM), to automate the test cases for this website.<br />
 It can be used during regression tests or after the deployment of any feature to make sure that it didn't affect older modules.
 
-+**Instructions to Contribute**
+**Instructions to Contribute**
 1. Fork this repository
 2. Clone the forked repository
 3. Add your contributions (code or documentation)
@@ -12,7 +12,7 @@ It can be used during regression tests or after the deployment of any feature to
 5. Create a pull request
 6. Wait for pull request to be merged
 
-+**Usage and Examples**
+**Usage and Examples**
 1. XML File : <br />
 There is a "TestRunner" folder which contains the XML file for each test case
 Run any case you want OR run all cases by running "Test_All_Cases.xml"
