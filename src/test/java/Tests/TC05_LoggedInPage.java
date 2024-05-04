@@ -75,7 +75,9 @@ public class TC05_LoggedInPage {
         //TODO Delete Account
         softAssert.assertTrue(new P05_LoggedInPage(getDriver()).clickOnDeleteAccountButton().checkAccountDeletedTestISDisplayed()
         ,"Account Deleted text isn't displayed");
-        softAssert.assertTrue(Utility.verifyUrl(getDriver(),DataUtils.getPropertyValue("environment", "AccountDeleted_Url")));
+        softAssert.assertTrue(Utility.verifyUrl(getDriver(),DataUtils.getPropertyValue("environment", "AccountDeleted_Url"))
+        ,"Url Isn't correct");
+        softAssert.assertAll();
     }
 
     @AfterMethod

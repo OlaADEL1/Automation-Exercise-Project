@@ -22,7 +22,6 @@ public class P07_SearchPage {
             int j=i+1;
             Utility.hover(driver,By.xpath("(//div[@class='col-sm-4'])["+j+"]"));
             String result= Utility.getText(driver,By.xpath("(//div[@class='product-overlay']//p)["+i+"]"));
-            System.out.println(result);
             if(!(result.toLowerCase().contains(searchData.toLowerCase())))
             {return false;}
         }

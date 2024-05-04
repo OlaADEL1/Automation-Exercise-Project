@@ -36,7 +36,6 @@ public class TC01_HomePage {
         new P01_HomePage(getDriver()).clickOnSingUpLink();
         Assert.assertTrue(Utility.verifyUrl(getDriver(),DataUtils.getPropertyValue("environment", "Login_Url")));
     }
-
     @AfterMethod
     public void quit() {
         quitDriver();

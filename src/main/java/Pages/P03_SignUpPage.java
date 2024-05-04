@@ -9,12 +9,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class P03_SignUpPage {
     private final WebDriver driver;
     private final String  titleLocator= "//div[@id='uniform-id_gender";
-    private final By passwordLocator =By.xpath("//input[@id='password']");
-    private final By daysDropDownLocator =By.xpath("//select[@id='days']");
-    private final By monthsDropDownLocator =By.xpath("//select[@id='months']");
-    private final By yearsDropDownLocator =By.xpath("//select[@id='years']");
-    private final By partnerCheckboxLocator =By.xpath("//input[@name='optin']");
-    private final By newsletterCheckboxLocator =By.xpath("//input[@name='newsletter']");
+    private final By passwordLocator =By.id("password");
+    private final By daysDropDownLocator =By.id("days");
+    private final By monthsDropDownLocator =By.id("months");
+    private final By yearsDropDownLocator =By.id("years");
+    private final By partnerCheckboxLocator =By.name("optin");
+    private final By newsletterCheckboxLocator =By.name("newsletter");
     private final By firstNameLocator =By.id("first_name");
     private final By lastNameLocator =By.id("last_name");
     private final By companyLocator =By.id("company");
@@ -32,7 +32,7 @@ public class P03_SignUpPage {
     }
 
     public P03_SignUpPage selectTitle(String title){
-        if (title.toLowerCase()== "Mr"){
+        if (title.equals("Mr")){
             By MrLocator= By.xpath(titleLocator+"1']");
             Utility.clickOnElement(driver,MrLocator);
         }

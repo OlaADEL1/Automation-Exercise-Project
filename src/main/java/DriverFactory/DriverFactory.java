@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.Map;
 
 public class DriverFactory {
     private static final ThreadLocal<WebDriver> driverThreadLocal=new ThreadLocal<>();
@@ -26,11 +27,12 @@ public class DriverFactory {
             default:
                 EdgeOptions options= new EdgeOptions();
                 options.addArguments("--start-maximized");
-                options.addArguments("--guest");
-                //HashMap<String,Object> hashMap=new HashMap<>();
-                //hashMap.put("download.default_directory","C:\\Users\\Ola\\IdeaProjects\\AutomationExerciseProject\\src\\test\\resources\\DownloadedFiles");
-                //options.setExperimentalOption("prefs",hashMap);
-                //options.addExtensions(new File("C:\\Users\\Ola\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extensions\\gmgoamodcdcjnbaobigkjelfplakmdhh\\3.25.1_0.crx"));
+                // options.addArguments("--guest");
+                // Changing the download file requires disabling guest mode
+                Map<String, Object> prefs = new HashMap<String, Object>();
+                String download_path =System.getProperty("user.dir")+"/src/test/resources/DownloadedFiles".replace("/","\\");
+                prefs.put("download.default_directory", download_path);
+                options.setExperimentalOption("prefs",prefs);
                 driverThreadLocal.set(new EdgeDriver(options));
         }
     }

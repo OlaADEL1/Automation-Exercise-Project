@@ -73,6 +73,7 @@ public class TC06_LoginCase {
         softAssert.assertTrue(new P04_accountCreatedPage(getDriver()).checkAccountCreatedTestISDisplayed()
                 ,"Account Created text isn't displayed");
         new P04_accountCreatedPage(getDriver()).clickONContinueButton();
+        softAssert.assertAll();
     }
     @Test
     public void deleteAccountAfterLogIn(){

@@ -94,8 +94,6 @@ public class TC17_DownloadInvoice {
         ,"Your delivery address isn't the same as sign up data");
         softAssert.assertTrue(new P10_CheckoutPage(getDriver()).checkBillingAddressDetails(map)
         ,"Your billing address isn't the same as sign up data");
-        softAssert.assertTrue(new P10_CheckoutPage(getDriver()).checkAddressDetailsByForMethod(map)
-        ,"Your delivery address isn't the same as sign up data in for loop");
         new P10_CheckoutPage(getDriver()).addDescription(DataUtils.getJsonData("paymentDetails","Description"))
                 .clickOnPlaceOrderButton()
                 .addPaymentDetails(DataUtils.getJsonData("paymentDetails","cardName"),
@@ -109,6 +107,8 @@ public class TC17_DownloadInvoice {
                 .clickOnDeleteAccountButton();
         softAssert.assertTrue(new P14_accountDeletedPage(getDriver()).checkAccountDeletedTestISDisplayed()
         ,"Account Deleted text isn't displayed");
+        softAssert.assertTrue(new P11_PaymentPage(getDriver()).checkFileIsExist(),
+                "The invoice file doesn't exist in the downloaded folder");
         softAssert.assertTrue(Utility.verifyUrl(getDriver(),DataUtils.getPropertyValue("environment", "AccountDeleted_Url")));
         softAssert.assertAll();
     }

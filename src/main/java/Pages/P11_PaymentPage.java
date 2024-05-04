@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.io.File;
+
 public class P11_PaymentPage {
     private final WebDriver driver;
     private final By cardNameLocator= By.xpath("//input[@name='name_on_card']");
@@ -47,6 +49,10 @@ public class P11_PaymentPage {
         Utility.clickOnElement(driver,continueButtonLocator);
         Utility.refreshPage(driver,continueButtonLocator);
         return new P05_LoggedInPage(driver);
+    }
+    public Boolean checkFileIsExist(){
+        File f = new File("src\\test\\resources\\DownloadedFiles\\invoice.txt");
+        return f.exists();
     }
 
 }
